@@ -92,6 +92,25 @@
 	align-items: center;
 }
 
+.g-3 {
+	display: grid;
+	justify-items: center;
+	grid-template-columns: 2fr 1fr 2fr;
+	grid-template-rows: 1fr;
+	grid-column-gap: 0px;
+	grid-row-gap: 0px;
+	align-items: center;
+}
+
+#p2p svg {
+	height: 75vh;
+}
+
+#p2p ul li {
+	list-style-type: circle;
+	margin: 4px auto;
+}
+
 .hero {
 	display: grid;
 	grid-template-columns: 1fr;
