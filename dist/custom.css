@@ -257,7 +257,7 @@
 }
 
 #spec img {
-	max-height: 76vh;
+	max-height: 66vh;
 }
 
 #comm .svg {
@@ -306,7 +306,7 @@
 .selfie {
 	background: url('https://ibelem.github.io/webnn-is-the-future/dist/images/webnn_adl_1113.png') no-repeat;
 	background-position: 0% 0%;
-	background-size: 100%;
+	background-size: cover;
 }
 
 .sliver {
@@ -327,6 +327,10 @@
 	grid-template-columns: 1fr 1fr;
 	grid-template-rows: 1fr;
 	grid-column-gap: 1em;
+}
+
+#spec2 .thankyou_3 {
+	align-items: start;
 }
 
 .g53 {

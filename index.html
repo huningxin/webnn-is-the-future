@@ -701,14 +701,49 @@
 					<div>
 						<h2 class="lg">WebNN 标准规范</h2>
 					</div>
-					<div class="mt-n1">
+					<div class="mt-1">
 						<img src="https://ibelem.github.io/webnn-is-the-future/dist/images/webnn_spec.png" alt="WebNN Spec" />
 					</div>
 					<div>
 						<ul>
+							<li>WebNN 标准规范由 W3C Web Machine Learning 工作组负责起草</li>
 							<li>WebNN 标准规范由 Intel 及 Microsoft 联合编辑</li>
-							<li>W3C 于 23 年 3 月 30 日发布 WebNN API v1 候选推荐</li>
 						</ul>
+					</div>
+				</section>
+
+				<section id="spec2">
+					<div>
+						<h2 class="lg">WebNN 标准规范进展</h2>
+					</div>
+					<div class="thankyou_3 mt-2">
+						<div>
+							<div>已交付</div>
+							<ul class="mt-1">
+								<li>2023 年 3 月: W3C CR</li>
+								<li>60 个 CNN/RNN 运算, float16/32, int32/uint32, int8/uint8</li>
+								<li>图像分类: SqueezeNet, MobileNet, ResNet</li>
+								<li>物体检测: TinyYOLO</li>
+								<li>噪声抑制: RNNoise, NSNet</li>
+							</ul>
+						</div>
+						<div>
+							<div>进行中</div>
+							<ul class="mt-1">
+								<li>2023 年末: W3C 候选推荐更新</li>
+								<li>18~22 个 Transformer ops, int64/uint64, NPU 和量化 (TBD)</li>
+							</ul>
+						</div>
+						<div>
+							<div>目标模型</div>
+							<ul class="mt-1">
+								<li>Text-to-image: Stable Diffusion unet/VAE/text encoder</li>
+								<li>Image segmentation: Segment Everything decoder</li>
+								<li>Speech-to-text: Whisper Tiny</li>
+								<li>Text-to-text 生成 (encoder-decoder): T5 及 M2M100</li>
+								<li>Text-generation (decoder): LLaMA</li>
+							</ul>
+						</div>
 					</div>
 				</section>
 
@@ -1248,7 +1283,7 @@
 
 				<section class="ops">
 					<div>
-						<h2 class="lg">WebNN 操作符的实现状态</h2>
+						<h2 class="lg">WebNN 操作符的实现状态 (部分)</h2>
 					</div>
 					<div class="mt-2 f6">
 						<table>
@@ -1748,7 +1783,7 @@
 										<span class="ed_s">✅</span> Maximum
 									</td>
 									<td>
-										<span class="ep_wip">🚀</span> Max
+										<span class="ed_s">✅</span> Max
 									</td>
 								</tr>
 								<tr>
@@ -1768,7 +1803,7 @@
 										<span class="ed_s">✅</span> Minimum
 									</td>
 									<td>
-										<span class="ep_wip">🚀</span> Min
+										<span class="ed_s">✅</span> Min
 									</td>
 								</tr>
 								<tr>
@@ -1786,7 +1821,7 @@
 									</td>
 									<td><span class="ed_s">✅ Abs</span></td>
 									<td>
-										<span class="ep_wip">🚀</span> Abs
+										<span class="ed_s">✅</span> Abs
 									</td>
 								</tr>
 								<tr>
@@ -1840,7 +1875,7 @@
 									</td>
 									<td><span class="ed_s">✅ Neg</span></td>
 									<td>
-										<span class="ep_wip">🚀</span> Neg
+										<span class="ed_s">✅</span> Neg
 									</td>
 								</tr>
 								<tr>
@@ -1859,7 +1894,7 @@
 										<span class="ed_s">✅</span> Elu
 									</td>
 									<td>
-										<span class="ep_wip">🚀</span> Elu
+										<span class="ed_s">✅</span> Elu
 									</td>
 								</tr>
 								<tr>
@@ -1889,7 +1924,7 @@
 
 				<section class="ops">
 					<div>
-						<h2 class="lg">WebNN 操作符的实现状态</h2>
+						<h2 class="lg">WebNN 操作符的实现状态 (部分)</h2>
 					</div>
 					<div class="mt-2 f6">
 						<table>
@@ -2162,7 +2197,7 @@
 										<span class="ed_s">✅</span> HardSwish
 									</td>
 									<td>
-										<span class="ep_wip">🚀</span> HardSwish
+										<span class="ed_s">✅</span> HardSwish
 									</td>
 								</tr>
 								<tr>
@@ -2200,7 +2235,7 @@
 										<span class="ed_s">✅</span> Pad
 									</td>
 									<td>
-										<span class="ep_wip">🚀</span> Pad
+										<span class="ed_s">✅</span> Pad
 									</td>
 								</tr>
 								<tr>
@@ -2284,7 +2319,7 @@
 										<span class="ed_s">✅</span> Prelu
 									</td>
 									<td>
-										<span class="ep_wip">🚀</span> Prelu
+										<span class="ed_s">✅</span> Prelu
 									</td>
 								</tr>
 								<tr>
@@ -2465,14 +2500,27 @@
 									</td>
 								</tr>
 								<tr>
-									<td id="spec_total" class="title">30</td>
+									<td id="spec_total" class="title">78</td>
 									<td id="wpt_total" class="title">29</td>
 									<td id="x_total" class="title">35</td>
 									<td id="ed_total" class="title">34</td>
-									<td id="ep_total" class="title">32</td>
+									<td id="ep_total" class="title">68</td>
 								</tr>
 							</tbody>
 						</table>
+					</div>
+				</section>
+
+				<section>
+					<div>
+						<h2 class="lg">WebNN 的实现状态 (DirectML)</h2>
+						<div class="mt-2">
+							<ul>
+								<li>23年9月: 在 Chromium 中完成对 MobileNetv2 所需 ops 的支持</li>
+								<li>23年12月: 实现对第一波模型所需 ops 的支持 (33 个)</li>
+								<li>24年5月: 完成对 Transformer 模型所需 ops 的支持</li>
+							</ul>
+						</div>
 					</div>
 				</section>
 
@@ -2666,16 +2714,6 @@
 								stroke="#AAAAAA" stroke-width="0.3" />
 						</svg>
 
-					</div>
-				</section>
-
-				<section>
-					<div>
-						<h2 class="lg">WebNN 和 ONNX Runtime Web 的集成</h2>
-						<img src="https://ibelem.github.io/webnn-is-the-future/dist/images/webnn-build.png" />
-						Microsoft Build 2023 <a
-							href="https://build.microsoft.com/en-US/sessions/0ea15726-1273-4a7c-a71a-efc635172a3b">Deliver AI-powered
-							experiences across cloud and edge, with Windows</a>
 					</div>
 				</section>
 
