@@ -303,8 +303,14 @@
 	font-size: 0.8em;
 }
 
-.selfie {
+.perf_1 {
 	background: url('https://ibelem.github.io/webnn-is-the-future/dist/images/webnn_adl_1113.png') no-repeat;
+	background-position: 0% 0%;
+	background-size: cover;
+}
+
+.perf_2 {
+	background: url('https://ibelem.github.io/webnn-is-the-future/dist/images/webnn_gpu.png') no-repeat;
 	background-position: 0% 0%;
 	background-size: cover;
 }
