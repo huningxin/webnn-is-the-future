@@ -85,7 +85,7 @@
 .g-2 {
 	display: grid;
 	justify-items: center;
-	grid-template-columns: 4fr 1fr;
+	grid-template-columns: 1fr 1fr;
 	grid-template-rows: 1fr;
 	grid-column-gap: 0px;
 	grid-row-gap: 0px;
@@ -363,9 +363,25 @@
 	color: var(--third) !important;
 }
 
+#p1 .webnnlogo {
+	justify-self: left;
+}
+
 #p1 #logo {
-	width: 40%;
-	height: 40%;
+	height: 100%;
+	width: 100%;
+	transform: scale(1);
+}
+
+#p1 .qcon {
+ 	height: 100%;
+	width: 32%;
+	transform: scale(1);
+	justify-self: right;
+}
+
+#p1 .qcon svg {
+	
 }
  
 .s { font-size: 0.86em; }
