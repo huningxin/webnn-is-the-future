@@ -584,7 +584,7 @@
 						<h2 class="lg">WebNN 标准规范</h2>
 					</div>
 					<div class="mt-1">
-						<img src="https://ibelem.github.io/webnn-is-the-future/dist/images/webnn_spec.png" alt="WebNN Spec" />
+						<img src="./dist/images/webnn_spec_dec.png" alt="WebNN Spec" />
 					</div>
 					<div>
 						<ul>
@@ -603,27 +603,28 @@
 							<div>已交付</div>
 							<ul class="mt-1">
 								<li>2023 年 3 月: W3C CR</li>
-								<li>60 个 CNN/RNN 运算, float16/32, int32/uint32, int8/uint8</li>
+								<li>60 个 CNN/RNN ops, float16/32, int32/uint32, int8/uint8</li>
 								<li>图像分类: SqueezeNet, MobileNet, ResNet</li>
 								<li>物体检测: TinyYOLO</li>
 								<li>噪声抑制: RNNoise, NSNet</li>
 							</ul>
 						</div>
 						<div>
-							<div>进行中</div>
+							<div>最新进展</div>
 							<ul class="mt-1">
-								<li>2023 年末: W3C 候选推荐更新</li>
-								<li>18~22 个 Transformer ops, int64/uint64, NPU 和量化 (TBD)</li>
+								<li>2023 年 12 月: W3C CR更新</li>
+								<li>新增 19 个 Transformer ops, int64/uint64</li>
+								<li>24年：支持 NPU 和量化</li>
 							</ul>
 						</div>
 						<div>
 							<div>目标模型</div>
 							<ul class="mt-1">
-								<li>Text-to-image: Stable Diffusion unet/VAE/text encoder</li>
-								<li>Image segmentation: Segment Everything decoder</li>
-								<li>Speech-to-text: Whisper Tiny</li>
-								<li>Text-to-text 生成 (encoder-decoder): T5 及 M2M100</li>
-								<li>Text-generation (decoder): LLaMA</li>
+								<li>文本到图像: Stable Diffusion</li>
+								<li>图像分割: Segment Everything</li>
+								<li>语音转文本: Whisper Tiny</li>
+								<li>文本到文本 (encoder-decoder): T5 及 M2M100</li>
+								<li>文本生成 (decoder): LLaMA2</li>
 							</ul>
 						</div>
 					</div>
@@ -995,7 +996,10 @@
 										<span class="title">XNNPack/CPU backend</span>
 									</th>
 									<th>
-										<span class="title">External Delegate</span>
+										<span class="title">DirectML/GPU backend</span>
+									</th>
+									<th>
+										<span class="title">Execution Delegate</span>
 									</th>
 									<th>
 										<span class="title">Execution Provider</span>
@@ -1004,6 +1008,13 @@
 								<tr>
 
 
+									<th>
+										<img
+											src="https://raw.githubusercontent.com/alrra/browser-logos/main/src/chrome-dev/chrome-dev_24x24.png"
+											alt="Chrome Dev"> <img
+											src="https://raw.githubusercontent.com/alrra/browser-logos/main/src/edge-canary/edge-canary_24x24.png"
+											alt="Edge Canary">
+									</th>
 									<th>
 										<img
 											src="https://raw.githubusercontent.com/alrra/browser-logos/main/src/chrome-dev/chrome-dev_24x24.png"
@@ -1230,7 +1241,9 @@
 										<img src="https://wpt.fyi/static/win.svg" alt="Windows"> <img src="https://wpt.fyi/static/linux.svg"
 											alt="Linux">
 									</th>
-
+									<th>
+										<img src="https://wpt.fyi/static/win.svg" alt="Windows">
+									</th>
 
 								</tr>
 							</thead>
@@ -1249,6 +1262,9 @@
 									</td>
 									<td>
 										<span class="x_s">✅</span> clamp
+									</td>
+									<td rowspan="2">
+										<span class="x_s">✅</span> ELEMENT_WISE_CLIP
 									</td>
 									<td rowspan="2">
 										<span class="ed_s">✅</span> ReluN1To1
@@ -1283,6 +1299,10 @@
 									</td>
 									<td>
 										<span class="x_s">✅</span> concatenate2
+									</td>
+									<td rowspan="3">
+										<br><span class="ed_s">✅</span> JOIN
+										<br><br>
 									</td>
 									<td rowspan="3">
 										<br><span class="ed_s">✅</span> Concatenation
@@ -1328,6 +1348,10 @@
 										<span class="x_s">✅</span> convolution_2d
 										<br>
 									</td>
+									<td rowspan="2">
+										<span class="x_s">✅</span> CONVOLUTION
+										<br>
+									</td>
 									<td>
 										<span class="ed_s">✅</span> Conv2d
 									</td>
@@ -1362,6 +1386,10 @@
 										<span class="x_s">✅</span> deconvolution_2d
 										<br>
 									</td>
+									<td rowspan="2">
+										<span class="x_s">✅</span> CONVOLUTION
+										<br>
+									</td>
 									<td>
 										<span class="ed_s">✅</span> TransposeConv
 									</td>
@@ -1393,6 +1421,9 @@
 										<span class="x_s">✅</span> add2
 									</td>
 									<td>
+										<span class="x_s">✅</span> ELEMENT_WISE_ADD
+									</td>
+									<td>
 										<span class="ed_s">✅</span> Add
 									</td>
 									<td>
@@ -1411,6 +1442,9 @@
 									</td>
 									<td>
 										<span class="x_s">✅</span> subtract
+									</td>
+									<td>
+										<span class="x_s">✅</span> ELEMENT_WISE_SUBTRACT
 									</td>
 									<td>
 										<span class="ed_s">✅</span> Sub
@@ -1433,6 +1467,9 @@
 										<span class="x_s">✅</span> multiply2
 									</td>
 									<td>
+										<span class="x_s">✅</span> ELEMENT_WISE_MULTIPLY
+									</td>
+									<td>
 										<span class="ed_s">✅</span> Mul
 									</td>
 									<td>
@@ -1451,6 +1488,9 @@
 									</td>
 									<td>
 										<span class="x_s">✅</span> divide
+									</td>
+									<td>
+										<span class="x_s">✅</span> ELEMENT_WISE_DIVIDE
 									</td>
 									<td>
 										<span class="ed_s">✅</span> Div
@@ -1473,6 +1513,9 @@
 										<span class="x_s">✅</span> maximum2
 									</td>
 									<td>
+										<span class="x_s">✅</span> ELEMENT_WISE_MAX
+									</td>
+									<td>
 										<span class="ed_s">✅</span> Maximum
 									</td>
 									<td>
@@ -1491,6 +1534,9 @@
 									</td>
 									<td>
 										<span class="x_s">✅</span> minimum2
+									</td>
+									<td>
+										<span class="x_s">✅</span> ELEMENT_WISE_MIN
 									</td>
 									<td>
 										<span class="ed_s">✅</span> Minimum
@@ -1512,6 +1558,9 @@
 									<td>
 										<span class="x_s">✅</span> abs
 									</td>
+									<td>
+										<span class="x_s">✅</span> ELEMENT_WISE_ABS
+									</td>
 									<td><span class="ed_s">✅ Abs</span></td>
 									<td>
 										<span class="ed_s">✅</span> Abs
@@ -1529,6 +1578,9 @@
 									</td>
 									<td>
 										<span class="x_s">✅</span> ceiling
+									</td>
+									<td>
+										<span class="x_s">✅</span> ELEMENT_WISE_CEIL
 									</td>
 									<td><span class="ed_s">✅ Ceil</span></td>
 									<td>
@@ -1548,6 +1600,9 @@
 									<td>
 										<span class="x_s">✅</span> floor
 									</td>
+									<td>
+										<span class="x_s">✅</span> ELEMENT_WISE_FLOOR
+									</td>
 									<td><span class="ed_s">✅ Floor</span></td>
 									<td>
 										<span class="ep_s">✅</span> Floor
@@ -1565,6 +1620,9 @@
 									</td>
 									<td>
 										<span class="x_s">✅</span> negate
+									</td>
+									<td>
+										<span class="x_s">✅</span> ELEMENT_WISE_NEGATE
 									</td>
 									<td><span class="ed_s">✅ Neg</span></td>
 									<td>
@@ -1584,6 +1642,9 @@
 										<span class="x_s">✅</span> elu
 									</td>
 									<td>
+										<span class="x_s">✅</span> ACTIVATION_ELU
+									</td>
+									<td>
 										<span class="ed_s">✅</span> Elu
 									</td>
 									<td>
@@ -1601,6 +1662,9 @@
 									</td>
 									<td>
 										<span class="x_s">✅</span> fully_connected
+									</td>
+									<td>
+										<span class="x_s">✅</span> GEMM
 									</td>
 									<td>
 										<span class="ed_s">✅</span> FullyConnected
@@ -1636,7 +1700,10 @@
 										<span class="title">XNNPack/CPU backend</span>
 									</th>
 									<th>
-										<span class="title">External Delegate</span>
+										<span class="title">DirectML/GPU backend</span>
+									</th>
+									<th>
+										<span class="title">Execution Delegate</span>
 									</th>
 									<th>
 										<span class="title">Execution Provider</span>
@@ -1645,6 +1712,13 @@
 								<tr>
 
 
+									<th>
+										<img
+											src="https://raw.githubusercontent.com/alrra/browser-logos/main/src/chrome-dev/chrome-dev_24x24.png"
+											alt="Chrome Dev"> <img
+											src="https://raw.githubusercontent.com/alrra/browser-logos/main/src/edge-canary/edge-canary_24x24.png"
+											alt="Edge Canary">
+									</th>
 									<th>
 										<img
 											src="https://raw.githubusercontent.com/alrra/browser-logos/main/src/chrome-dev/chrome-dev_24x24.png"
@@ -1871,6 +1945,9 @@
 										<img src="https://wpt.fyi/static/win.svg" alt="Windows"> <img src="https://wpt.fyi/static/linux.svg"
 											alt="Linux">
 									</th>
+									<th>
+										<img src="https://wpt.fyi/static/win.svg" alt="Windows">
+									</th>
 								</tr>
 							</thead>
 							<tbody>
@@ -1885,6 +1962,9 @@
 									</td>
 									<td>
 										<span class="x_s">✅</span> hardswish
+									</td>
+									<td>
+										<span class="x_s">✅</span> <br> y = x * max(0, min(6, (x + 3))) / 6
 									</td>
 									<td>
 										<span class="ed_s">✅</span> HardSwish
@@ -1906,6 +1986,9 @@
 										<span class="x_s">✅</span> leaky_relu
 									</td>
 									<td>
+										<span class="x_s">✅</span> ACTIVATION_LEAKY_RELU
+									</td>
+									<td>
 										<span class="ed_s">✅</span> LeakyRelu
 									</td>
 									<td>
@@ -1923,6 +2006,9 @@
 									</td>
 									<td>
 										<span class="x_s">✅</span> static_constant_pad
+									</td>
+									<td>
+										<span class="x_s">✅</span> PADDING
 									</td>
 									<td>
 										<span class="ed_s">✅</span> Pad
@@ -1946,6 +2032,10 @@
 									</td>
 									<td rowspan="2">
 										<span class="x_s">✅</span> average_pooling_2d
+										<br>
+									</td>
+									<td rowspan="2">
+										<span class="x_s">✅</span> AVERAGE_POOLING
 										<br>
 									</td>
 									<td>
@@ -1984,6 +2074,10 @@
 										<br>
 									</td>
 									<td rowspan="2">
+										<span class="x_s">✅</span> MAX_POOLING2
+										<br>
+									</td>
+									<td rowspan="2">
 										<span class="ed_s">✅</span> MaxPool2d
 										<br>
 									</td>
@@ -2009,6 +2103,9 @@
 										<span class="x_s">✅</span> prelu
 									</td>
 									<td>
+										<span class="x_s">✅</span> ACTIVATION_PARAMETERIZED_RELU
+									</td>
+									<td>
 										<span class="ed_s">✅</span> Prelu
 									</td>
 									<td>
@@ -2028,6 +2125,9 @@
 										<span class="x_s">✅</span> clamp
 									</td>
 									<td>
+										<span class="x_s">✅</span> ACTIVATION_RELU
+									</td>
+									<td>
 										<span class="ed_s">✅</span> Relu
 									</td>
 									<td>
@@ -2040,6 +2140,9 @@
 									<td><span class="wpt_wip">🚀🚀</span></td>
 									<td>
 										<span class="x_s">✅</span> static_resize_bilinear_2d
+									</td>
+									<td>
+										<span class="x_s">✅</span> RESAMPLE
 									</td>
 									<td>
 										<span class="ed_s">✅</span> ResizeBilinear
@@ -2062,6 +2165,9 @@
 										<span class="x_s">✅</span> static_reshape
 									</td>
 									<td>
+										<span class="x_s">✅</span> DML_TENSOR_DESC
+									</td>
+									<td>
 										<span class="ed_s">✅</span> Reshape
 									</td>
 									<td>
@@ -2080,6 +2186,9 @@
 									</td>
 									<td>
 										<span class="x_s">✅</span> sigmoid
+									</td>
+									<td>
+										<span class="x_s">✅</span> ACTIVATION_SIGMOID
 									</td>
 									<td>
 										<span class="ed_s">✅</span> Logistic
@@ -2103,6 +2212,10 @@
 									</td>
 									<td>
 										<span class="x_s">✅</span> even_split2
+									</td>
+									<td rowspan="4">
+										<br><br><span class="ed_s">✅</span> SPLIT
+										<br><br><br>
 									</td>
 									<td rowspan="4">
 										<br><br><span class="ed_s">✅</span> Split
@@ -2140,6 +2253,9 @@
 									<td rowspan="2">
 										<span class="x_s">✅</span> static_slice
 									</td>
+									<td rowspan="2">
+										<span class="x_s">✅</span> SLICE
+									</td>
 									<td>
 										<span class="x_s">✅</span> Slice
 									</td>
@@ -2167,6 +2283,9 @@
 										<span class="x_s">✅</span> softmax
 									</td>
 									<td>
+										<span class="x_s">✅</span> ACTIVATION_SOFTMAX
+									</td>
+									<td>
 										<span class="ed_s">✅</span> Softmax
 									</td>
 									<td>
@@ -2184,6 +2303,9 @@
 									</td>
 									<td>
 										<span class="x_s">✅</span> static_transpose
+									</td>
+									<td>
+										<span class="x_s">✅</span> DML_TENSOR_DESC
 									</td>
 									<td>
 										<span class="ed_s">✅</span> Transpose
@@ -2209,8 +2331,8 @@
 						<h2 class="lg">WebNN 的实现状态 (DirectML)</h2>
 						<div class="mt-2">
 							<ul>
-								<li>目前已经支持 60 个 ops</li>
-								<li>Transfomer 的 ops 也正与 spec 同步开发中</li>
+								<li>目前已经支持 66 个 ops</li>
+								<li>Transfomer 的 ops 已基本支持</li>
 								<li>正在为 WebNN NPU 支持作出适配</li>
 							</ul>
 						</div>
