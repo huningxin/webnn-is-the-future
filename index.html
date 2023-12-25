@@ -1545,6 +1545,286 @@
 										<span class="ed_s">✅</span> Min
 									</td>
 								</tr>
+
+							</tbody>
+						</table>
+					</div>
+				</section>
+
+				<section class="ops">
+					<div>
+						<h2 class="lg">WebNN 操作符的实现状态 (部分)</h2>
+					</div>
+					<div class="mt-2 f6">
+						<table>
+							<thead>
+								<tr>
+									<th rowspan="3">
+										<br><span class="title"><img src="https://www.w3.org/StyleSheets/TR/2021/logos/W3C" alt="W3C"><br><a
+												href="https://www.w3.org/TR/webnn/">WebNN Spec</a></span>
+										<br><br>
+									</th>
+									<th rowspan="3">
+										<br><span class="title">Web Platform Tests</span>
+										<br><br>
+									</th>
+									<th>
+										<span class="title">XNNPack/CPU backend</span>
+									</th>
+									<th>
+										<span class="title">DirectML/GPU backend</span>
+									</th>
+									<th>
+										<span class="title">Execution Delegate</span>
+									</th>
+									<th>
+										<span class="title">Execution Provider</span>
+									</th>
+								</tr>
+								<tr>
+
+
+									<th>
+										<img
+											src="https://raw.githubusercontent.com/alrra/browser-logos/main/src/chrome-dev/chrome-dev_24x24.png"
+											alt="Chrome Dev"> <img
+											src="https://raw.githubusercontent.com/alrra/browser-logos/main/src/edge-canary/edge-canary_24x24.png"
+											alt="Edge Canary">
+									</th>
+									<th>
+										<img
+											src="https://raw.githubusercontent.com/alrra/browser-logos/main/src/chrome-dev/chrome-dev_24x24.png"
+											alt="Chrome Dev"> <img
+											src="https://raw.githubusercontent.com/alrra/browser-logos/main/src/edge-canary/edge-canary_24x24.png"
+											alt="Edge Canary">
+									</th>
+									<th rowspan="2" class="tflite">
+										<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+											viewBox="0 0 286 64">
+											<g>
+												<g>
+													<defs>
+														<path id="SVGID_1_"
+															d="M47.5 17.6L25 4.8v52.6l9-5.2V37.4l6.8 3.9-.1-10.1-6.7-3.9v-5.9l13.5 7.9z" />
+													</defs>
+													<clipPath id="SVGID_2_">
+														<use xlink:href="#SVGID_1_" overflow="visible" />
+													</clipPath>
+													<g clip-path="url(#SVGID_2_)">
+														<linearGradient id="SVGID_3_" gradientUnits="userSpaceOnUse" x1="-1.6" y1="335.05" x2="53.6"
+															y2="335.05" gradientTransform="translate(0 -304)">
+															<stop offset="0" stop-color="#ff6f00" />
+															<stop offset="1" stop-color="#ffa800" />
+														</linearGradient>
+														<path d="M-1.6 4.6h55.2v52.9H-1.6V4.6z" fill="url(#SVGID_3_)" />
+													</g>
+												</g>
+											</g>
+											<g>
+												<g>
+													<defs>
+														<path id="SVGID_4_" d="M.5 17.6L23 4.8v52.6l-9-5.2V21.4L.5 29.3z" />
+													</defs>
+													<clipPath id="SVGID_5_">
+														<use xlink:href="#SVGID_4_" overflow="visible" />
+													</clipPath>
+													<g clip-path="url(#SVGID_5_)">
+														<linearGradient id="SVGID_6_" gradientUnits="userSpaceOnUse" x1="-1.9" y1="335.05" x2="53.3"
+															y2="335.05" gradientTransform="translate(0 -304)">
+															<stop offset="0" stop-color="#ff6f00" />
+															<stop offset="1" stop-color="#ffa800" />
+														</linearGradient>
+														<path d="M-1.9 4.6h55.2v52.9H-1.9V4.6z" fill="url(#SVGID_6_)" />
+													</g>
+												</g>
+											</g>
+											<path style="fill:#ffffff" d="M88.2 21.1h-10v27.7h-5.6V21.1h-10v-4.5h25.6v4.5z" />
+											<path style="fill:#ffffff"
+												d="M94.9 49.2c-3.4 0-6.2-1.1-8.3-3.2-2.1-2.1-3.2-5-3.2-8.6v-.7c0-2.2.4-4.4 1.4-6.4.9-1.8 2.2-3.3 3.9-4.4 1.7-1.1 3.6-1.6 5.6-1.6 3.3 0 5.8 1 7.6 3.1s2.7 5 2.7 8.8v2.2H88.9c.1 1.8.8 3.4 2 4.7 1.2 1.2 2.7 1.8 4.4 1.7 2.4.1 4.6-1.1 6-3l2.9 2.8c-1 1.4-2.3 2.6-3.8 3.3-1.8 1-3.6 1.4-5.5 1.3zm-.6-20.5c-1.4-.1-2.7.5-3.6 1.5-1 1.2-1.6 2.7-1.7 4.3h10.3v-.4c-.1-1.8-.6-3.2-1.4-4.1-1-.8-2.3-1.4-3.6-1.3zm19.4-3.9l.2 2.8c1.7-2.1 4.3-3.3 7-3.2 5 0 7.5 2.9 7.6 8.6v15.8h-5.4V33.3c0-1.5-.3-2.6-1-3.4-.7-.7-1.7-1.1-3.2-1.1-2.1-.1-4 1.1-4.9 2.9v17h-5.4v-24l5.1.1zm32.2 17.5c0-.9-.4-1.7-1.2-2.2-1.2-.7-2.6-1.1-3.9-1.3-1.6-.3-3.1-.8-4.6-1.5-2.7-1.3-4-3.2-4-5.6 0-2 1-4 2.6-5.2 1.7-1.4 4-2.1 6.6-2.1 2.9 0 5.2.7 6.9 2.1 1.7 1.3 2.7 3.4 2.6 5.5h-5.4c0-1-.4-1.9-1.2-2.6-.9-.7-1.9-1.1-3.1-1-1 0-2 .2-2.9.8-.7.5-1.1 1.3-1.1 2.2 0 .8.4 1.5 1 1.9.7.5 2.1.9 4.2 1.4 1.7.3 3.4.9 5 1.7 1.1.5 2 1.3 2.7 2.3.6 1 .9 2.1.9 3.3 0 2.1-1 4-2.7 5.2-1.8 1.3-4.1 2-7 2-1.8 0-3.6-.3-5.2-1.1-1.4-.6-2.7-1.6-3.6-2.9-.8-1.2-1.3-2.6-1.3-4h5.2c0 1.1.5 2.2 1.4 2.9 1 .7 2.3 1.1 3.5 1 1.4 0 2.5-.3 3.2-.8 1-.4 1.4-1.2 1.4-2zm8.1-5.7c0-2.2.4-4.4 1.4-6.3.9-1.8 2.2-3.3 3.9-4.3 1.8-1 3.8-1.6 5.8-1.5 3.2 0 5.9 1 7.9 3.1s3.1 4.8 3.3 8.3v1.3c0 2.2-.4 4.3-1.4 6.3-.8 1.8-2.2 3.3-3.9 4.3-1.8 1-3.8 1.6-5.9 1.5-3.4 0-6.1-1.1-8.1-3.4-2-2.2-3-5.2-3.1-9l.1-.3zm5.3.5c0 2.5.5 4.4 1.5 5.8 1.8 2.3 5.1 2.8 7.5 1 .4-.3.7-.6 1-1 1-1.4 1.5-3.5 1.5-6.2 0-2.4-.5-4.3-1.6-5.8-1.7-2.3-5-2.8-7.4-1.1-.4.3-.8.7-1.1 1-.8 1.4-1.4 3.5-1.4 6.3zm33.1-7.3c-.7-.1-1.5-.2-2.2-.2-2.5 0-4.1.9-5 2.8v16.4h-5.4v-24h5.1l.1 2.7c1.3-2.1 3.1-3.1 5.4-3.1.6 0 1.3.1 1.9.3l.1 5.1zm22.5 5.3h-13v13.7h-5.6V16.6h20.5v4.5h-14.9v9.6h13v4.4zm10.7 13.7h-5.4V16.5h5.4v32.3zm3.9-12.2c0-2.2.4-4.4 1.4-6.3.9-1.8 2.2-3.3 3.9-4.3 1.8-1 3.8-1.6 5.8-1.5 3.2 0 5.9 1 7.9 3.1s3.1 4.8 3.3 8.3v1.3c0 2.2-.4 4.3-1.3 6.3-.8 1.8-2.2 3.3-3.9 4.3-1.8 1-3.8 1.6-5.9 1.5-3.4 0-6.1-1.1-8.1-3.4-2-2.2-3.1-5.2-3.1-9v-.3zm5.4.5c0 2.5.5 4.4 1.5 5.8 1 1.4 2.6 2.2 4.3 2.1 1.7.1 3.3-.7 4.2-2.1 1-1.4 1.5-3.5 1.5-6.2 0-2.4-.5-4.3-1.6-5.8-1.7-2.3-5-2.8-7.4-1.1-.4.3-.8.7-1.1 1-.9 1.4-1.4 3.5-1.4 6.3zm41.2 4.3l3.8-16.5h5.2l-6.5 24h-4.4l-5.1-16.5-5.1 16.5h-4.4l-6.6-24h5.3l3.9 16.4 4.9-16.4h4.1l4.9 16.5z" />
+										</svg>
+
+										Lite for TensorFlow.js
+									</th>
+									<th rowspan="2" class="onnxrt">
+										<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+											x="0px" y="0px" viewBox="0 0 217 74" style="enable-background:new 0 0 217 74;"
+											xml:space="preserve">
+											<style type="text/css">
+												.st0 {
+													fill: #ffffff;
+												}
+
+												.st1 {
+													fill: #FFFFFF;
+												}
+
+												.st2 {
+													fill: #D1D1D1;
+												}
+
+												.st3 {
+													fill: #B2B2B2;
+												}
+											</style>
+											<g>
+												<g>
+													<g>
+														<path class="st0" d="M95.92,26.59V12.43c0-6.83,5.14-9.38,11.88-9.38c6.68,0,11.94,2.55,11.94,9.38v14.16
+														c0,6.83-5.26,9.38-11.94,9.38C101.07,35.97,95.92,33.43,95.92,26.59z M116.79,12.43c0-4.96-3.37-7.24-8.99-7.24
+														c-5.62,0-8.93,2.28-8.93,7.24v14.16c0,4.96,3.31,7.24,8.93,7.24c5.62,0,8.99-2.28,8.99-7.24V12.43z" />
+														<path class="st0" d="M149.02,34.05L131.63,8.32v26.4c0,0.67-0.71,0.98-1.48,0.98c-0.71,0-1.48-0.31-1.48-0.98V3.99
+														c0-0.71,0.71-0.94,1.48-0.94c1.06,0,1.89,1.07,2.42,1.83l17.09,25.51V3.99c0-0.67,0.77-0.94,1.48-0.94
+														c0.77,0,1.48,0.27,1.48,0.94v30.73c0,0.67-0.71,0.98-1.48,0.98C150.26,35.71,149.55,34.81,149.02,34.05z" />
+														<path class="st0" d="M182.3,34.05L164.92,8.32v26.4c0,0.67-0.71,0.98-1.48,0.98c-0.71,0-1.48-0.31-1.48-0.98V3.99
+														c0-0.71,0.71-0.94,1.48-0.94c1.06,0,1.89,1.07,2.42,1.83l17.09,25.51V3.99c0-0.67,0.77-0.94,1.48-0.94
+														c0.77,0,1.48,0.27,1.48,0.94v30.73c0,0.67-0.71,0.98-1.48,0.98C183.54,35.71,182.83,34.81,182.3,34.05z" />
+														<path class="st0" d="M204.3,21.46l-8.75,12.78c-0.41,0.63-0.89,1.52-1.77,1.52c-0.77,0-1.66-0.49-1.66-1.12
+														c0-0.18,0.12-0.36,0.24-0.58l10.17-14.7l-9.99-14.56c-0.24-0.31-0.36-0.58-0.36-0.85c0-0.58,0.71-0.94,1.66-0.94
+														c0.83,0,1.42,0.85,1.89,1.56l8.57,12.64l8.63-12.64c0.47-0.62,1.01-1.56,1.89-1.56c0.95,0,1.66,0.36,1.66,0.94
+														c0,0.27-0.12,0.54-0.36,0.85l-10.05,14.56l10.23,14.7c0.12,0.22,0.24,0.4,0.24,0.58c0,0.63-0.83,1.12-1.66,1.12
+														c-0.89,0-1.36-0.89-1.77-1.52L204.3,21.46z" />
+													</g>
+													<g>
+														<path class="st0" d="M109.47,53.62c0-2.28-0.65-3.95-1.94-4.97c-1.29-1.02-2.99-1.53-5.06-1.53l-5.65,0
+														c-0.43,0.05-0.64,0.26-0.64,0.62v23.54c0,0.43,0.22,0.65,0.65,0.65s0.65-0.22,0.65-0.65V60.15h4.94l5.4,10.53l0.01,0.02h0.01
+														c0.01,0.01,0.05,0.06,0.14,0.24l0.14,0.38c0.05,0.07,0.11,0.16,0.19,0.27c0.08,0.12,0.17,0.2,0.25,0.25
+														c0.08,0.05,0.18,0.07,0.27,0.07c0.19,0,0.35-0.06,0.47-0.18c0.12-0.12,0.18-0.28,0.18-0.47c0-0.12-0.04-0.25-0.11-0.39
+														l-5.55-10.8C107.57,59.61,109.47,57.44,109.47,53.62z M108.17,53.62c0,1.78-0.51,3.11-1.52,3.96c-1.01,0.85-2.42,1.28-4.18,1.28
+														h-5V48.42h5c1.76,0,3.17,0.42,4.18,1.26C107.66,50.51,108.17,51.83,108.17,53.62z" />
+														<path class="st0" d="M127.25,47.12c-0.43,0-0.65,0.21-0.65,0.62v17.38c0,1.9-0.47,3.34-1.39,4.28c-0.92,0.95-2.26,1.42-3.98,1.42
+														c-1.72,0-3.05-0.48-3.96-1.42c-0.91-0.95-1.38-2.39-1.38-4.28V47.73c0-0.41-0.22-0.62-0.65-0.62s-0.65,0.21-0.65,0.62v17.38
+														c0,2.41,0.61,4.2,1.8,5.32c1.2,1.12,2.82,1.68,4.83,1.68s3.64-0.57,4.85-1.68c1.21-1.12,1.82-2.91,1.82-5.32V47.73
+														C127.9,47.32,127.68,47.12,127.25,47.12z" />
+														<path class="st0"
+															d="M147.3,47.12c-0.43,0-0.65,0.21-0.65,0.62V68.7l-10.27-20.34c-0.46-0.83-0.82-1.24-1.08-1.24
+														c-0.43,0-0.65,0.21-0.65,0.62v23.54c0,0.43,0.22,0.65,0.65,0.65c0.43,0,0.65-0.22,0.65-0.65V50.3l10.34,20.38
+														c0.42,0.83,0.75,1.24,1.02,1.24c0.43,0,0.65-0.22,0.65-0.65V47.73C147.95,47.32,147.74,47.12,147.3,47.12z" />
+														<path class="st0" d="M166.38,47.12h-13.22c-0.19,0-0.35,0.07-0.47,0.2c-0.12,0.13-0.18,0.28-0.18,0.45
+														c0,0.17,0.06,0.32,0.18,0.45c0.12,0.13,0.28,0.2,0.47,0.2h5.98v22.85c0,0.43,0.22,0.65,0.65,0.65c0.43,0,0.65-0.22,0.65-0.65
+														V48.42h5.95c0.43,0,0.65-0.23,0.65-0.68C167.03,47.32,166.81,47.12,166.38,47.12z" />
+														<path class="st0" d="M172.23,47.12c-0.43,0-0.65,0.21-0.65,0.62v23.54c0,0.43,0.22,0.65,0.65,0.65c0.43,0,0.65-0.22,0.65-0.65
+														V47.73C172.88,47.32,172.66,47.12,172.23,47.12z" />
+														<path class="st0" d="M195.66,47.12c-0.27,0-0.62,0.41-1.08,1.24l-6.56,12.85l-6.53-12.85c-0.46-0.83-0.82-1.24-1.08-1.24
+														c-0.43,0-0.65,0.21-0.65,0.62v23.54c0,0.43,0.22,0.65,0.65,0.65c0.43,0,0.65-0.22,0.65-0.65V50.3l6.28,12.16
+														c0.21,0.45,0.43,0.67,0.68,0.67c0.22,0,0.44-0.22,0.68-0.66l6.31-12.16v20.97c0,0.43,0.22,0.65,0.65,0.65
+														c0.43,0,0.65-0.22,0.65-0.65V47.73C196.31,47.32,196.09,47.12,195.66,47.12z" />
+														<path class="st0" d="M215.89,70.62H204.5V60.15h5.37c0.41,0,0.62-0.21,0.62-0.62c0-0.45-0.21-0.68-0.62-0.68h-5.37V48.42h11.39
+														c0.41,0,0.62-0.23,0.62-0.68c0-0.4-0.21-0.62-0.62-0.62h-12.04c-0.43,0-0.65,0.22-0.65,0.65v23.5c0,0.43,0.22,0.65,0.65,0.65
+														h12.04c0.41,0,0.62-0.21,0.62-0.62C216.5,70.85,216.29,70.62,215.89,70.62z" />
+													</g>
+												</g>
+												<g>
+													<g>
+														<polygon class="st1" points="58.11,20.09 39.33,41.08 39.33,1.31 			" />
+														<polyline class="st2" points="58.11,20.09 46,33.49 39.33,20.09 			" />
+														<path class="st3" d="M39.33,1.31l18.77,18.78H39.33C39.33,20.09,39.33,1.43,39.33,1.31z" />
+													</g>
+													<g>
+														<polygon class="st1" points="24.76,16.72 38.93,41.06 1.1,28.77 			" />
+														<polyline class="st2" points="24.76,16.72 33.77,32.37 18.96,34.57 			" />
+														<path class="st3" d="M1.1,28.77l23.66-12.05l-5.8,17.85C18.96,34.57,1.22,28.81,1.1,28.77z" />
+													</g>
+													<g>
+														<polygon class="st1" points="11.25,47.38 38.78,41.44 15.4,73.61 			" />
+														<polyline class="st2" points="11.25,47.38 28.92,43.65 26.44,58.42 			" />
+														<path class="st3"
+															d="M15.4,73.61l-4.15-26.23l15.19,11.03C26.44,58.42,15.48,73.51,15.4,73.61z" />
+													</g>
+													<g>
+														<polygon class="st1" points="36.25,69.71 39.1,41.69 62.47,73.87 			" />
+														<polyline class="st2" points="36.25,69.71 38.16,51.75 51.43,58.67 			" />
+														<path class="st3"
+															d="M62.47,73.87l-26.23-4.16l15.19-11.03C51.43,58.67,62.4,73.77,62.47,73.87z" />
+													</g>
+													<g>
+														<polygon class="st1" points="65.2,52.84 39.44,41.47 77.26,29.18 			" />
+														<polyline class="st2" points="65.2,52.84 48.71,45.47 59.4,34.98 			" />
+														<path class="st3"
+															d="M77.26,29.18L65.2,52.84l-5.8-17.85C59.4,34.98,77.14,29.22,77.26,29.18z" />
+													</g>
+													<path class="st0" d="M77.49,28.79c-0.13-0.15-0.33-0.21-0.52-0.15l-0.02,0.01L40.49,40.5l17.87-19.98c0,0,0,0,0-0.01
+													c0.02-0.02,0.04-0.04,0.05-0.07c0,0,0-0.01,0.01-0.01c0.01-0.02,0.02-0.03,0.03-0.05c0,0,0-0.01,0-0.01
+													c0-0.01,0.01-0.02,0.01-0.03c0.01-0.02,0.01-0.04,0.01-0.05c0-0.01,0-0.02,0-0.03c0-0.02,0-0.04,0-0.06c0-0.01,0-0.01,0-0.02
+													c0-0.03,0-0.05-0.01-0.08c0-0.01,0-0.01-0.01-0.02c-0.01-0.02-0.01-0.04-0.02-0.06c0-0.01-0.01-0.02-0.01-0.03
+													c-0.01-0.02-0.02-0.03-0.03-0.05c0-0.01-0.01-0.02-0.01-0.02c-0.02-0.02-0.03-0.05-0.05-0.07L39.56,1.08
+													c-0.14-0.14-0.35-0.18-0.53-0.11c-0.18,0.08-0.3,0.25-0.3,0.45v0.02v38.34L25.26,16.61c0,0,0,0,0-0.01
+													c-0.01-0.02-0.03-0.05-0.05-0.07c0,0-0.01-0.01-0.01-0.01c-0.01-0.01-0.03-0.03-0.04-0.04c0,0-0.01,0-0.01-0.01
+													c-0.01-0.01-0.02-0.01-0.02-0.02c-0.02-0.01-0.03-0.02-0.05-0.03c-0.01,0-0.02-0.01-0.03-0.01c-0.02-0.01-0.04-0.02-0.06-0.02
+													c-0.01,0-0.01,0-0.02-0.01c-0.03-0.01-0.05-0.01-0.08-0.02c-0.01,0-0.01,0-0.02,0c-0.02,0-0.04,0-0.06,0c-0.01,0-0.02,0-0.03,0
+													c-0.02,0-0.04,0.01-0.06,0.01c-0.01,0-0.02,0-0.03,0.01c-0.03,0.01-0.05,0.02-0.08,0.03L0.96,28.48
+													c-0.17,0.09-0.28,0.27-0.26,0.47c0.02,0.2,0.15,0.36,0.33,0.42l0.02,0.01l36.46,11.85l-26.2,5.66c0,0,0,0-0.01,0
+													c-0.03,0.01-0.05,0.01-0.08,0.03c0,0-0.01,0-0.01,0.01c-0.02,0.01-0.03,0.02-0.05,0.03c0,0-0.01,0.01-0.01,0.01
+													c-0.01,0.01-0.02,0.01-0.02,0.02c-0.01,0.01-0.03,0.02-0.04,0.04c-0.01,0.01-0.01,0.01-0.02,0.02c-0.01,0.01-0.03,0.03-0.04,0.05
+													c0,0.01-0.01,0.01-0.01,0.02c-0.02,0.02-0.03,0.05-0.04,0.07c0,0.01,0,0.01-0.01,0.02c-0.01,0.02-0.01,0.04-0.02,0.06
+													c0,0.01,0,0.02-0.01,0.03c0,0.02-0.01,0.04-0.01,0.06c0,0.01,0,0.02,0,0.03c0,0.03,0,0.06,0.01,0.09l4.15,26.23
+													c0.03,0.19,0.17,0.35,0.37,0.4c0.19,0.05,0.39-0.03,0.51-0.19l0.01-0.02L38.5,42.84L35.79,69.5c0,0,0,0,0,0.01
+													c0,0.03,0,0.06,0,0.09c0,0,0,0.01,0,0.01c0,0.02,0,0.04,0.01,0.06c0,0,0,0.01,0,0.01c0,0.01,0.01,0.02,0.01,0.03
+													c0.01,0.02,0.01,0.03,0.02,0.05c0,0.01,0.01,0.02,0.01,0.03c0.01,0.02,0.02,0.04,0.03,0.05c0,0.01,0.01,0.01,0.01,0.02
+													c0.02,0.02,0.04,0.04,0.06,0.06c0,0,0.01,0.01,0.01,0.01c0.02,0.01,0.03,0.03,0.05,0.04c0.01,0.01,0.02,0.01,0.02,0.01
+													c0.02,0.01,0.03,0.02,0.05,0.02c0.01,0,0.02,0.01,0.03,0.01c0.03,0.01,0.05,0.02,0.08,0.02l26.23,4.16
+													c0.19,0.03,0.39-0.06,0.49-0.23c0.1-0.17,0.09-0.38-0.02-0.54l-0.01-0.02L40.34,42.39l24.52,10.82c0,0,0,0,0.01,0
+													c0.03,0.01,0.05,0.02,0.08,0.03c0,0,0.01,0,0.01,0c0.02,0,0.04,0.01,0.06,0.01c0,0,0.01,0,0.01,0c0.01,0,0.02,0,0.03,0
+													c0.02,0,0.04,0,0.06,0c0.01,0,0.02,0,0.03,0c0.02,0,0.04-0.01,0.06-0.02c0.01,0,0.01,0,0.02-0.01c0.03-0.01,0.05-0.02,0.07-0.03
+													c0.01,0,0.01-0.01,0.02-0.01c0.02-0.01,0.04-0.02,0.05-0.04c0.01-0.01,0.01-0.01,0.02-0.02c0.01-0.01,0.03-0.03,0.04-0.04
+													c0.01-0.01,0.01-0.01,0.02-0.02c0.02-0.02,0.03-0.05,0.05-0.07l12.06-23.66C77.64,29.15,77.61,28.94,77.49,28.79z M46.01,32.75
+													L40,20.69h16.9L46.01,32.75z M56.36,19.26l0.46,0.46H39.7c0-2.45,0-13.48,0-17.12L56.36,19.26z M39.7,22.26l5.65,11.35l-5.65,6.31
+													V22.26z M2.44,28.81l21-10.7l0.58-0.29L18.72,34.1C16.4,33.34,5.9,29.94,2.44,28.81z M24.96,18.05l8.11,14.09l-13.33,1.98
+													L24.96,18.05z M33.68,33.02l4.26,7.32l-16.8-5.46L33.68,33.02z M15.86,72.35l-3.68-23.28l-0.1-0.64L25.92,58.5
+													C24.48,60.48,18,69.41,15.86,72.35z M12.58,47.61l15.91-3.36l-2.23,13.29L12.58,47.61z M27.42,56.44l2.1-12.5l8.28-1.79
+													L27.42,56.44z M61.42,73.05l-23.28-3.69l-0.64-0.1l13.85-10.06C52.79,61.17,59.27,70.1,61.42,73.05z M36.87,68.52l1.72-16.17
+													l11.95,6.23L36.87,68.52z M38.62,51.27l0.86-8.43l10.38,14.29L38.62,51.27z M40.65,41.47l16.8-5.46l-9.05,8.88L40.65,41.47z
+													M49.42,45.25l9.62-9.44l5.22,16.07L49.42,45.25z M65.45,50.93l-0.29,0.58l-5.29-16.28c2.33-0.76,12.82-4.17,16.29-5.29
+													L65.45,50.93z" />
+												</g>
+											</g>
+											<g>
+											</g>
+											<g>
+											</g>
+											<g>
+											</g>
+											<g>
+											</g>
+											<g>
+											</g>
+											<g>
+											</g>
+											<g>
+											</g>
+											<g>
+											</g>
+											<g>
+											</g>
+											<g>
+											</g>
+											<g>
+											</g>
+											<g>
+											</g>
+											<g>
+											</g>
+											<g>
+											</g>
+											<g>
+											</g>
+										</svg>
+									</th>
+								</tr>
+								<tr>
+
+
+									<th>
+										<img src="https://wpt.fyi/static/win.svg" alt="Windows"> <img src="https://wpt.fyi/static/linux.svg"
+											alt="Linux">
+									</th>
+									<th>
+										<img src="https://wpt.fyi/static/win.svg" alt="Windows">
+									</th>
+
+								</tr>
+							</thead>
+							<tbody>
+
 								<tr>
 									<td><span class="spec"><a href="https://www.w3.org/TR/webnn/#api-mlgraphbuilder-unary">abs
 												<sup>element-wise unary</sup></a></span></td>
@@ -1673,7 +1953,117 @@
 										<span class="ep_s">✅</span> Gemm
 									</td>
 								</tr>
-
+								<tr>
+									<td><span class="spec"><a
+												href="https://www.w3.org/TR/webnn/#api-mlgraphbuilder-hard-swish">hardSwish</a></span></td>
+									<td>
+										<a
+											href="https://wpt.fyi/results/webnn/hard_swish.https.any.html?label=master&amp;label=experimental">📈</a>
+										<a href="https://github.com/web-platform-tests/wpt/blob/master/webnn/hard_swish.https.any.js"><span
+												class="wpt_s">🧪</span></a>
+									</td>
+									<td>
+										<span class="x_s">✅</span> hardswish
+									</td>
+									<td>
+										<span class="x_s">✅</span> <br> y = x * max(0, min(6, (x + 3))) / 6
+									</td>
+									<td>
+										<span class="ed_s">✅</span> HardSwish
+									</td>
+									<td>
+										<span class="ed_s">✅</span> HardSwish
+									</td>
+								</tr>
+								<tr>
+									<td><span class="spec"><a
+												href="https://www.w3.org/TR/webnn/#api-mlgraphbuilder-leakyrelu">leakyRelu</a></span></td>
+									<td>
+										<a
+											href="https://wpt.fyi/results/webnn/leaky_relu.https.any.html?label=master&amp;label=experimental">📈</a>
+										<a href="https://github.com/web-platform-tests/wpt/blob/master/webnn/leaky_relu.https.any.js"><span
+												class="wpt_s">🧪</span></a>
+									</td>
+									<td>
+										<span class="x_s">✅</span> leaky_relu
+									</td>
+									<td>
+										<span class="x_s">✅</span> ACTIVATION_LEAKY_RELU
+									</td>
+									<td>
+										<span class="ed_s">✅</span> LeakyRelu
+									</td>
+									<td>
+										<span class="ep_s">✅</span> LeakyRelu
+									</td>
+								</tr>
+								<tr>
+									<td><span class="spec"><a
+												href="https://www.w3.org/TR/webnn/#api-mlgraphbuilder-prelu">prelu</a></span></td>
+									<td>
+										<a
+											href="https://wpt.fyi/results/webnn/prelu.https.any.html?label=master&amp;label=experimental">📈</a>
+										<a href="https://github.com/web-platform-tests/wpt/blob/master/webnn/prelu.https.any.js"><span
+												class="wpt_s">🧪</span></a>
+									</td>
+									<td>
+										<span class="x_s">✅</span> prelu
+									</td>
+									<td>
+										<span class="x_s">✅</span> ACTIVATION_PARAMETERIZED_RELU
+									</td>
+									<td>
+										<span class="ed_s">✅</span> Prelu
+									</td>
+									<td>
+										<span class="ed_s">✅</span> Prelu
+									</td>
+								</tr>
+								<tr>
+									<td><span class="spec"><a href="https://www.w3.org/TR/webnn/#api-mlgraphbuilder-relu">relu</a></span>
+									</td>
+									<td>
+										<a
+											href="https://wpt.fyi/results/webnn/relu.https.any.html?label=master&amp;label=experimental">📈</a>
+										<a href="https://github.com/web-platform-tests/wpt/blob/master/webnn/relu.https.any.js"><span
+												class="wpt_s">🧪</span></a>
+									</td>
+									<td>
+										<span class="x_s">✅</span> clamp
+									</td>
+									<td>
+										<span class="x_s">✅</span> ACTIVATION_RELU
+									</td>
+									<td>
+										<span class="ed_s">✅</span> Relu
+									</td>
+									<td>
+										<span class="ep_s">✅</span> Relu
+									</td>
+								</tr>
+								<tr>
+									<td><span class="spec"><a
+												href="https://www.w3.org/TR/webnn/#api-mlgraphbuilder-sigmoid">sigmoid</a></span>
+									</td>
+									<td>
+										<a
+											href="https://wpt.fyi/results/webnn/sigmoid.https.any.html?label=master&amp;label=experimental">📈</a>
+										<a href="https://github.com/web-platform-tests/wpt/blob/master/webnn/sigmoid.https.any.js"><span
+												class="wpt_s">🧪</span></a>
+									</td>
+									<td>
+										<span class="x_s">✅</span> sigmoid
+									</td>
+									<td>
+										<span class="x_s">✅</span> ACTIVATION_SIGMOID
+									</td>
+									<td>
+										<span class="ed_s">✅</span> Logistic
+									</td>
+									<td>
+										<span class="ep_s">✅</span> Sigmoid
+									</td>
+								</tr>
 							</tbody>
 						</table>
 					</div>
@@ -1951,50 +2341,7 @@
 								</tr>
 							</thead>
 							<tbody>
-								<tr>
-									<td><span class="spec"><a
-												href="https://www.w3.org/TR/webnn/#api-mlgraphbuilder-hard-swish">hardSwish</a></span></td>
-									<td>
-										<a
-											href="https://wpt.fyi/results/webnn/hard_swish.https.any.html?label=master&amp;label=experimental">📈</a>
-										<a href="https://github.com/web-platform-tests/wpt/blob/master/webnn/hard_swish.https.any.js"><span
-												class="wpt_s">🧪</span></a>
-									</td>
-									<td>
-										<span class="x_s">✅</span> hardswish
-									</td>
-									<td>
-										<span class="x_s">✅</span> <br> y = x * max(0, min(6, (x + 3))) / 6
-									</td>
-									<td>
-										<span class="ed_s">✅</span> HardSwish
-									</td>
-									<td>
-										<span class="ed_s">✅</span> HardSwish
-									</td>
-								</tr>
-								<tr>
-									<td><span class="spec"><a
-												href="https://www.w3.org/TR/webnn/#api-mlgraphbuilder-leakyrelu">leakyRelu</a></span></td>
-									<td>
-										<a
-											href="https://wpt.fyi/results/webnn/leaky_relu.https.any.html?label=master&amp;label=experimental">📈</a>
-										<a href="https://github.com/web-platform-tests/wpt/blob/master/webnn/leaky_relu.https.any.js"><span
-												class="wpt_s">🧪</span></a>
-									</td>
-									<td>
-										<span class="x_s">✅</span> leaky_relu
-									</td>
-									<td>
-										<span class="x_s">✅</span> ACTIVATION_LEAKY_RELU
-									</td>
-									<td>
-										<span class="ed_s">✅</span> LeakyRelu
-									</td>
-									<td>
-										<span class="ep_s">✅</span> LeakyRelu
-									</td>
-								</tr>
+								
 								<tr>
 									<td><span class="spec"><a href="https://www.w3.org/TR/webnn/#api-mlgraphbuilder-pad">pad</a></span>
 									</td>
@@ -2092,50 +2439,6 @@
 								</tr>
 								<tr>
 									<td><span class="spec"><a
-												href="https://www.w3.org/TR/webnn/#api-mlgraphbuilder-prelu">prelu</a></span></td>
-									<td>
-										<a
-											href="https://wpt.fyi/results/webnn/prelu.https.any.html?label=master&amp;label=experimental">📈</a>
-										<a href="https://github.com/web-platform-tests/wpt/blob/master/webnn/prelu.https.any.js"><span
-												class="wpt_s">🧪</span></a>
-									</td>
-									<td>
-										<span class="x_s">✅</span> prelu
-									</td>
-									<td>
-										<span class="x_s">✅</span> ACTIVATION_PARAMETERIZED_RELU
-									</td>
-									<td>
-										<span class="ed_s">✅</span> Prelu
-									</td>
-									<td>
-										<span class="ed_s">✅</span> Prelu
-									</td>
-								</tr>
-								<tr>
-									<td><span class="spec"><a href="https://www.w3.org/TR/webnn/#api-mlgraphbuilder-relu">relu</a></span>
-									</td>
-									<td>
-										<a
-											href="https://wpt.fyi/results/webnn/relu.https.any.html?label=master&amp;label=experimental">📈</a>
-										<a href="https://github.com/web-platform-tests/wpt/blob/master/webnn/relu.https.any.js"><span
-												class="wpt_s">🧪</span></a>
-									</td>
-									<td>
-										<span class="x_s">✅</span> clamp
-									</td>
-									<td>
-										<span class="x_s">✅</span> ACTIVATION_RELU
-									</td>
-									<td>
-										<span class="ed_s">✅</span> Relu
-									</td>
-									<td>
-										<span class="ep_s">✅</span> Relu
-									</td>
-								</tr>
-								<tr>
-									<td><span class="spec"><a
 												href="https://www.w3.org/TR/webnn/#api-mlgraphbuilder-resample2d">resample2d</a></span></td>
 									<td><span class="wpt_wip">🚀🚀</span></td>
 									<td>
@@ -2172,29 +2475,6 @@
 									</td>
 									<td>
 										<span class="ep_s">✅</span> Reshape
-									</td>
-								</tr>
-								<tr>
-									<td><span class="spec"><a
-												href="https://www.w3.org/TR/webnn/#api-mlgraphbuilder-sigmoid">sigmoid</a></span>
-									</td>
-									<td>
-										<a
-											href="https://wpt.fyi/results/webnn/sigmoid.https.any.html?label=master&amp;label=experimental">📈</a>
-										<a href="https://github.com/web-platform-tests/wpt/blob/master/webnn/sigmoid.https.any.js"><span
-												class="wpt_s">🧪</span></a>
-									</td>
-									<td>
-										<span class="x_s">✅</span> sigmoid
-									</td>
-									<td>
-										<span class="x_s">✅</span> ACTIVATION_SIGMOID
-									</td>
-									<td>
-										<span class="ed_s">✅</span> Logistic
-									</td>
-									<td>
-										<span class="ep_s">✅</span> Sigmoid
 									</td>
 								</tr>
 								<tr>
@@ -2317,7 +2597,7 @@
 								<tr>
 									<td id="spec_total" class="title">78</td>
 									<td id="wpt_total" class="title">33</td>
-									<td id="x_total" class="title">35</td>
+									<td id="x_total" class="title">66</td>
 									<td id="ed_total" class="title">34</td>
 									<td id="ep_total" class="title">70</td>
 								</tr>
@@ -2331,9 +2611,9 @@
 						<h2 class="lg">WebNN 的实现状态 (DirectML)</h2>
 						<div class="mt-2">
 							<ul>
-								<li>目前已经支持 66 个 ops</li>
+								<li>目前已经支持 66 个 ops (GPU)</li>
 								<li>Transfomer 的 ops 已基本支持</li>
-								<li>正在为 WebNN NPU 支持作出适配</li>
+								<li>正在为 NPU 支持作出适配</li>
 							</ul>
 						</div>
 					</div>
@@ -3348,6 +3628,8 @@
 				}
 			},
 		});
+
+		Reveal.configure({ pdfMaxPagesPerSlide: 1 });
 
 		const onceWheel = (scrollDownHandler, scrolUpHandler) => {
 			let wheelPower = 0

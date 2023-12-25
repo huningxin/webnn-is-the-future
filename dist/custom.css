@@ -257,7 +257,7 @@
 }
 
 #spec img {
-	max-height: 66vh;
+	max-height: 40vh;
 }
 
 #comm .svg {
@@ -319,7 +319,6 @@
 	border: 3px solid var(--second);
 	padding: 60px;
 	background-color: var(--bg-06);
-	width: 60vw;
 	justify-self: center;
 	font-weight: 600;
 }
@@ -411,7 +410,7 @@ table tr td {
 }
 
 .pnp {
-	height: 80vh;
+	height: 45vh;
 }
 
 .mt-n0 {
